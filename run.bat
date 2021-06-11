@@ -1,0 +1,3 @@
+:start
+nodemon .
+goto start

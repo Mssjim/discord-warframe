@@ -1,0 +1,27 @@
+{
+  "name": "discord-warframe",
+  "version": "1.0.0",
+  "description": "A Discord-Bot with features and wiki of Warframe.",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mssjim/discord-warframe.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "warframe"
+  ],
+  "author": "Mssjim, JappaBR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mssjim/discord-warframe/issues"
+  },
+  "homepage": "https://github.com/mssjim/discord-warframe#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+  }
+}
