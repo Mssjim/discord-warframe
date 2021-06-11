@@ -4,6 +4,7 @@ const settings = require('./settings.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
+client.colors = require('./resources/colors.json');
 
 console.log('================================');
 

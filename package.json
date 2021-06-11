@@ -23,5 +23,8 @@
   "homepage": "https://github.com/mssjim/discord-warframe#readme",
   "dependencies": {
     "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "fs": "0.0.1-security",
+    "request": "^2.88.2"
   }
 }
