@@ -11,6 +11,8 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.categories = new Discord.Collection();
 client.colors = require('./resources/colors.json');
+client.images = require('./resources/images.json');
+client.emojos = require('./resources/emojos.json');
 
 // Handlers
 fs.readdirSync('./handlers/').forEach(async(handler) => {
