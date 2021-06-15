@@ -2,12 +2,12 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: 'ping',
-    aliases: ['pingo', 'checkms'],
+    aliases: ['checkping', 'checkms'],
     description: 'Checks response time of Bot',
     category: 'core',
 
     run: async(client, msg, args) => {
-        const pingMsg = await msg.channel.send(':ping_pong: Pinging...');
+        const pingMsg = await msg.channel.send(`${msg.author.toString()} :ping_pong: Pinging...`);
 
         const embed = new MessageEmbed()
             .setTitle(':ping_pong: Pong!')
@@ -16,6 +16,6 @@ module.exports = {
             .setTimestamp()
             .setFooter(client.user.username, client.user.displayAvatarURL())
         
-        pingMsg.edit('', embed);
+        pingMsg.edit(msg.author.toString(), embed);
     }
 }
