@@ -1,14 +1,14 @@
+
+
 module.exports = async(url) => {
-    return await new Promise((resolve, reject) => {
+    return await new Promise(resolve => {
         require('request')({
             uri: url
-        }, (err, res, body) => {
-            if (!err) {
-                var result = JSON.parse(body);
-                if (result != null && result != undefined)
-                    resolve(result)
-                else
-                    reject('Erro, apenas')
+        }, (err, res) => {
+            if (!err && JSON.parse(res.body) && res.statusCode == 200) {
+                resolve(JSON.parse(res.body));
+            } else {
+                resolve();
             }
         });
     });
