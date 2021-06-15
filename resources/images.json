@@ -1,2 +1,9 @@
 {
+    "relics" : {
+        "lith" : "https://static.wikia.nocookie.net/warframe/images/a/ae/VoidProjectionsIronD.png",
+        "meso" : "https://static.wikia.nocookie.net/warframe/images/1/12/VoidProjectionsBronzeD.png",
+        "neo" : "https://static.wikia.nocookie.net/warframe/images/c/c5/VoidProjectionsSilverD.png",
+        "axi" : "https://static.wikia.nocookie.net/warframe/images/0/0e/VoidProjectionsGoldD.png",
+        "requiem" : "https://static.wikia.nocookie.net/warframe/images/c/c6/RequiemR0.png"
+    }
 }
