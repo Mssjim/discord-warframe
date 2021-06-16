@@ -10,7 +10,7 @@ module.exports = {
 
     run: async(client, msg, args) => {
         const data = await fecther('https://api.warframestat.us/pc/fissures');
-        
+
         if(!data) {
             msg.channel.send(`${client.emojos.error} **|** ${msg.author.toString()} No response from Warframe API.`)
             return;
