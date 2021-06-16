@@ -6,7 +6,6 @@ const cetus = ['cetus', 'ce',];
 const vallis = ['vallis','va',];
 const cambion = ['cambion', 'ca',];
 
-const espaco = "ㅤ"
 module.exports = {
 
     name: 'cycle',
@@ -19,15 +18,14 @@ module.exports = {
 
             const data = await fecther('https://api.warframestat.us/pc/earthCycle')
 
-            const emoji = data.isDay ? '☀' : '🌑';
+            const emoji = data.isDay ? '☀ Day!' : '🌑 Night!';
             const timeString = data.isDay ? 'Nightfall' : 'Dawn';
 
             const embed = new MessageEmbed()
                 .setTitle(':earth_americas: Earth Cycle')
-                .addField(emoji, data.state)
+                .addField("Time is:", emoji)
                 .addField(`Time for ${timeString}`, data.timeLeft)
                 .setColor(client.colors.primary)
-                .setThumbnail('https://static.wikia.nocookie.net/warframe/images/1/1e/Earth.png')
                 .setTimestamp()
                 .setFooter(client.user.username, client.user.displayAvatarURL())
 
@@ -36,11 +34,11 @@ module.exports = {
         if (cetus.includes(args[0]?.toLowerCase())) {
 
             const data = await fecther('https://api.warframestat.us/pc/cetusCycle')
-            const emoji = data.isDay ? '☀' : '🌑';
+            const emoji = data.isDay ? '☀ Day!' : '🌑 Night!';
             const timeString = data.isDay ? 'Night' : 'Day';
             const embed = new MessageEmbed()
                 .setTitle('🦎 Cetus Cycle')
-                .addField(emoji, data.state, true)
+                .addField("Time is:", emoji)
                 .addField(`Time for ${timeString}`, data.timeLeft)
                 .setColor(client.colors.primary)
                 .setTimestamp()
@@ -50,11 +48,11 @@ module.exports = {
         if (vallis.includes(args[0]?.toLowerCase())) {
 
             const data = await fecther('https://api.warframestat.us/pc/vallisCycle')
-            const emoji = data.isDay ? '☀' : '🌑';
+            const emoji = data.isDay ? '☀ Hot' : '❄ Cold';
             const timeString = data.isDay ? 'Cold' : 'Hot';
             const embed = new MessageEmbed()
                 .setTitle('🦊 Vallis Cycle')
-                .addField(emoji, data.state, true)
+                .addField("Time is:", emoji)
                 .addField(`Time for ${timeString}`, data.timeLeft)
                 .setColor(client.colors.primary)
                 .setTimestamp()
