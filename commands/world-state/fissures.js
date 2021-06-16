@@ -35,7 +35,6 @@ module.exports = {
                         value: `${fissure.node} [${fissure.enemy}]` // TODO Enemy emoji
                     });
                 });
-
                 pages.push(
                     new MessageEmbed()
                         .setTitle(`${tier} Fissures`)
