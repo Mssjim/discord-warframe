@@ -12,5 +12,9 @@
             "default" : "https://static.wikia.nocookie.net/warframe/images/1/15/Sortie_b.png",
             "raptor" : "https://static.wikia.nocookie.net/warframe/images/6/6c/RaptorTwoMortar.png"
         }
+    },
+
+    "syndicates" : {
+        "nightwave" : "https://static.wikia.nocookie.net/warframe/images/e/e0/NightwaveSyndicate.png"
     }
 }
