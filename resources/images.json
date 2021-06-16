@@ -5,5 +5,12 @@
         "neo" : "https://static.wikia.nocookie.net/warframe/images/c/c5/VoidProjectionsSilverD.png",
         "axi" : "https://static.wikia.nocookie.net/warframe/images/0/0e/VoidProjectionsGoldD.png",
         "requiem" : "https://static.wikia.nocookie.net/warframe/images/c/c6/RequiemR0.png"
+    },
+
+    "sorties" : {
+        "bosses" : {
+            "default" : "https://static.wikia.nocookie.net/warframe/images/1/15/Sortie_b.png",
+            "raptor" : "https://static.wikia.nocookie.net/warframe/images/6/6c/RaptorTwoMortar.png"
+        }
     }
 }
