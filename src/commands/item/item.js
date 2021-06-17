@@ -1,5 +1,6 @@
 ﻿const { MessageEmbed } = require("discord.js");
-const fecther = require("../../resources/fecther");
+const { fetcher } = require("../../functions");
+const colors = require("../../resources/colors.json");
 
 module.exports = {
     name: 'item',
@@ -10,7 +11,7 @@ module.exports = {
     run: async (client, msg, args) => {
         if(!args[0]) return; // TODO missing args for item search
 
-        const dataItem = await fecther(`https://api.warframestat.us/items/search/${args.join("%20")}`)
+        const dataItem = await fetcher(`https://api.warframestat.us/items/search/${args.join("%20")}`)
         if (dataItem.length < 1) {
             msg.reply("Item não encontrado")
             return;
@@ -26,7 +27,7 @@ module.exports = {
             .addField("Power: ", d.power)
             .addField("Description: ", d.description)
             .setThumbnail("https://logosmarcas.net/wp-content/uploads/2021/02/Warframe-Logo.png")
-            .setColor(client.colors.primary)
+            .setColor(colors.primary)
             .setTimestamp()
             .setFooter(client.user.username, client.user.displayAvatarURL())
         msg.channel.send(embed);

@@ -4,11 +4,11 @@ module.exports = client => {
     console.log('Loading commands...');
     let loadedCommands = 0, totalCommands = 0;
 
-    fs.readdirSync('./commands/').forEach(category => {
+    fs.readdirSync('./src/commands/').forEach(category => {
         console.log(`  \x1b[33mLoading ${category} commands...\x1b[0m`);
         let categoryCommands = [];
 
-        fs.readdirSync(`./commands/${category}`).forEach((file, i, files) => {
+        fs.readdirSync(`./src/commands/${category}`).forEach((file, i, files) => {
             const cmd = require(`../commands/${category}/${file}`);
             totalCommands++;
 

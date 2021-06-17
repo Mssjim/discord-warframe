@@ -1,4 +1,4 @@
-module.exports = date => {
+module.exports.etaTime = date => {
     let millis = date.getTime() - Date.now();
 
     if (typeof millis !== 'number') {
@@ -32,4 +32,18 @@ module.exports = date => {
         eta.push(`${Math.floor(seconds)}s`);
     }
     return eta.join(' ');
+}
+
+module.exports.fetcher = async(url) => {
+    return await new Promise(resolve => {
+        require('request')({
+            uri: url
+        }, (err, res) => {
+            if (!err && JSON.parse(res.body) && res.statusCode == 200) {
+                resolve(JSON.parse(res.body));
+            } else {
+                resolve();
+            }
+        });
+    });
 }

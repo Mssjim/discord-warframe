@@ -1,7 +1,9 @@
 const { MessageEmbed } = require("discord.js");
-const fecther = require("../../resources/fecther");
+const { etaTime, fetcher } = require("../../functions");
+const colors = require("../../resources/colors.json");
+const emojis = require("../../resources/emojis.json");
+const images = require("../../resources/images.json");
 const pagination = require("discord.js-pagination");
-const etaTime = require("../../resources/etaTime");
 
 module.exports = {
     name: 'nightwave',
@@ -10,10 +12,10 @@ module.exports = {
     category: 'world-state',
 
     run: async(client, msg, args) => {
-        const data = await fecther('https://api.warframestat.us/pc/nightwave');
+        const data = await fetcher('https://api.warframestat.us/pc/nightwave');
         
         if(!data) {
-            msg.channel.send(`${client.emojos.error} **|** ${msg.author.toString()} No response from Warframe API.`)
+            msg.channel.send(`${emojis.error} **|** ${msg.author.toString()} No response from Warframe API.`)
             return;
         }
 
@@ -55,8 +57,8 @@ module.exports = {
                     .setDescription(`**${tier} Challenges**\n\n`)
                     .addFields(fields)
                     .addField('\u200B', `**Season Remain Time:** ${data.eta}`)
-                    .setColor(client.colors.primary)
-                    .setThumbnail(client.images.syndicates.nightwave)
+                    .setColor(colors.primary)
+                    .setThumbnail(images.syndicates.nightwave)
                     .setTimestamp()
                     .setFooter(client.user.username, client.user.displayAvatarURL())
             );

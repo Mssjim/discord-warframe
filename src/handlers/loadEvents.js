@@ -4,7 +4,7 @@ module.exports = client => {
     console.log('\nLoading events...');
     let loadedEvents = 0, totalEvents = 0;
 
-    fs.readdirSync(`./events/`).forEach(file => {
+    fs.readdirSync(`./src/events/`).forEach(file => {
         totalEvents++;
         try {
             const event = require(`../events/${file}`);

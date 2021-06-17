@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const colors = require("../../resources/colors.json");
 
 module.exports = {
     name: 'ping',
@@ -12,7 +13,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle(':ping_pong: Pong!')
             .setDescription(`${client.ws.ping} ms`)
-            .setColor(client.colors.primary)
+            .setColor(colors.primary)
             .setTimestamp()
             .setFooter(client.user.username, client.user.displayAvatarURL())
         

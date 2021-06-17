@@ -1,5 +1,8 @@
 const { MessageEmbed } = require("discord.js");
-const fecther = require("../../resources/fecther");
+const { fetcher } = require("../../functions");
+const colors = require("../../resources/colors.json");
+const emojis = require("../../resources/emojis.json");
+const images = require("../../resources/images.json");
 const pagination = require("discord.js-pagination");
 
 module.exports = {
@@ -9,10 +12,10 @@ module.exports = {
     category: 'world-state',
 
     run: async(client, msg, args) => {
-        const data = await fecther('https://api.warframestat.us/pc/fissures');
+        const data = await fetcher('https://api.warframestat.us/pc/fissures');
 
         if(!data) {
-            msg.channel.send(`${client.emojos.error} **|** ${msg.author.toString()} No response from Warframe API.`)
+            msg.channel.send(`${emojis.error} **|** ${msg.author.toString()} No response from Warframe API.`)
             return;
         }
 
@@ -44,8 +47,8 @@ module.exports = {
                 new MessageEmbed()
                     .setTitle(`${tier} Fissures`)
                     .addFields(fields)
-                    .setColor(client.colors.primary)
-                    .setThumbnail(client.images.relics[tier.toLowerCase()])
+                    .setColor(colors.primary)
+                    .setThumbnail(images.relics[tier.toLowerCase()])
                     .setTimestamp()
                     .setFooter(client.user.username, client.user.displayAvatarURL())
             );
