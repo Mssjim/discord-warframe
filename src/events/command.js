@@ -56,7 +56,7 @@ module.exports = client => {
             `\n• Type \`${prefix}help\` to see my commands`+
             `\n• Invite me to your server with \`${prefix}invite\``+
             `\n\n**Join on my Support Server**`+
-            `\n${client.invite}`;
+            `\n${client.supportServer}`;
 
             const embed = new MessageEmbed()
                 .setDescription(description)
