@@ -48,6 +48,7 @@ async function run(cmd, client, msg, args) {
 module.exports = client => {
     client.on('message', msg => {
         const prefix = settings.prefix; // TODO Get guild prefix
+        client.prefix = prefix;
         client.lang = settings.lang; // TODO Get guild lang
 
         if(msg.content.startsWith(`<@${client.user.id}>`) || msg.content.startsWith(`<@!${client.user.id}>`)) {

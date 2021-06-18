@@ -144,3 +144,16 @@ module.exports.getSimillarCommands = (commands, cmd) => {
 
     return simillarCommands;
 }
+
+module.exports.titleCase = string => {
+    const dashes = (string.match(/[-]/g) || []).length;
+    const spaces = (string.match(/[ ]/g) || []).length;
+
+    string = dashes > spaces ? string.split('-') : string.split(' ');
+
+    for (let i = 0; i < string.length; i++) {
+        string[i] = string[i][0].toUpperCase() + string[i].substring(1);     
+    }
+    
+    return string.join(' ');
+}
