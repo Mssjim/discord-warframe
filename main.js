@@ -11,6 +11,8 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.categories = new Discord.Collection();
 
+client.invite = 'https://discord.gg/h38gTNyPXA';
+
 // Handlers
 fs.readdirSync('./src/handlers/').forEach(async(handler) => {
     await require(`./src/handlers/${handler}`)(client);

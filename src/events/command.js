@@ -49,6 +49,22 @@ module.exports = client => {
     client.on('message', msg => {
         const prefix = settings.prefix; // TODO Get guild prefix
         client.lang = settings.lang; // TODO Get guild lang
+
+        if(msg.content.startsWith(`<@${client.user.id}>`) || msg.content.startsWith(`<@!${client.user.id}>`)) {
+
+            const description = `• My prefix for this server is \`${prefix}\``+
+            `\n• Type \`${prefix}help\` to see my commands`+
+            `\n• Invite me to your server with \`${prefix}invite\``+
+            `\n\n**Join on my Support Server**`+
+            `\n${client.invite}`;
+
+            const embed = new MessageEmbed()
+                .setDescription(description)
+                .setThumbnail(client.user.displayAvatarURL())
+                .setColor(colors.primary)
+
+            msg.channel.send(msg.author.toString(), embed);
+        }
     
         if(msg.author.bot || !msg.guild || !msg.content.startsWith(prefix)) return;
     
