@@ -21,6 +21,9 @@ module.exports = {
         let thumbnail = images.sorties.bosses[data.boss.toLowerCase()];
         if(!thumbnail) thumbnail = images.sorties.bosses["default"];
 
+        if(!images.sorties.bosses[data.boss.toLowerCase()]) // TODO Debug code
+            console.log(`\x1b[31mResource image for [${data.boss.toLowerCase()}] not founded!\x1b[0m`)
+
         let fields = [];
 
         data.variants.forEach(mission => {
