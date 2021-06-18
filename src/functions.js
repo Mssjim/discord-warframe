@@ -8,9 +8,9 @@ module.exports.etaTime = date => {
     let seconds = Math.abs(millis / 1000);
 
     const duration = {
-        "day": 60*60*24,
-        "hour": 60*60,
-        "minute": 60
+        'day': 60*60*24,
+        'hour': 60*60,
+        'minute': 60
     }
     
     if (seconds >= duration.day) {

@@ -3,6 +3,7 @@ const { getSimillarCommands } = require('../functions');
 const { MessageEmbed } = require('discord.js');
 const colors = require('../resources/colors.json');
 const emojis = require('../resources/emojis.json');
+const { supportServer } = require("../settings.json");
 
 async function run(cmd, client, msg, args) {
     if(cmd.length <1) return;
@@ -57,7 +58,7 @@ module.exports = client => {
             `\n• Type \`${prefix}help\` to see my commands`+
             `\n• Invite me to your server with \`${prefix}invite\``+
             `\n\n**Join on my Support Server**`+
-            `\n${client.supportServer}`;
+            `\n${supportServer}`;
 
             const embed = new MessageEmbed()
                 .setDescription(description)

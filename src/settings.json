@@ -1,4 +1,6 @@
 {
     "prefix" : "!",
-    "lang" : "en"
+    "lang" : "en",
+    "supportServer" : "https://discord.gg/h38gTNyPXA",
+    "invite": "https://discord.com/oauth2/authorize?client_id=852204539004452884&scope=bot&permissions=67488833"
 }

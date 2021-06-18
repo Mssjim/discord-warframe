@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const colors = require("../../resources/colors.json");
 const emojis = require("../../resources/emojis.json");
+const { supportServer } = require("../../settings.json");
 
 module.exports = {
     name: 'support',
@@ -12,7 +13,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setTitle(`${emojis.discord} Support Server`)
-            .setDescription(`**[Click Here to Join](${client.supportServer})**`)
+            .setDescription(`**[Click Here to Join](${supportServer})**`)
             .setColor(colors.primary)
             .setTimestamp()
             .setFooter(client.user.username, client.user.displayAvatarURL())

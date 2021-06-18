@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const colors = require("../../resources/colors.json");
 const emojis = require("../../resources/emojis.json");
+const { invite } = require("../../settings.json");
 
 module.exports = {
     name: 'invite',
@@ -12,7 +13,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setTitle(`${emojis.warframe} Invite`)
-            .setDescription(`**[Click Here to Invite Me!](${client.invite})**`)
+            .setDescription(`**[Click Here to Invite Me!](${invite})**`)
             .setColor(colors.primary)
             .setTimestamp()
             .setFooter(client.user.username, client.user.displayAvatarURL())
