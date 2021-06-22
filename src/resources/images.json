@@ -7,6 +7,27 @@
         "requiem" : "https://static.wikia.nocookie.net/warframe/images/c/c6/RequiemR0.png"
     },
 
+    "planets" : {
+        "mercury" : "https://static.wikia.nocookie.net/warframe/images/4/41/Mercury.png",
+        "venus" : "https://static.wikia.nocookie.net/warframe/images/d/dc/Venus.png",
+        "earth" : "https://static.wikia.nocookie.net/warframe/images/1/1e/Earth.png",
+        "mars" : "https://static.wikia.nocookie.net/warframe/images/d/de/Mars.png",
+        "phobos" : "https://static.wikia.nocookie.net/warframe/images/b/bf/Phobos.png",
+        "deimos" : "https://static.wikia.nocookie.net/warframe/images/b/b9/Deimos.png",
+        "ceres" : "https://static.wikia.nocookie.net/warframe/images/2/24/Ceres.png",
+        "jupiter" : "https://static.wikia.nocookie.net/warframe/images/6/68/Jupiter.png",
+        "europa" : "https://static.wikia.nocookie.net/warframe/images/6/63/Europa.png",
+        "saturn" : "https://static.wikia.nocookie.net/warframe/images/2/28/Saturn.png",
+        "uranus" : "https://static.wikia.nocookie.net/warframe/images/e/ec/Uranus.png",
+        "neptune" : "https://static.wikia.nocookie.net/warframe/images/1/15/Neptune.png",
+        "pluto" : "https://static.wikia.nocookie.net/warframe/images/3/35/Pluto.png",
+        "sedna" : "https://static.wikia.nocookie.net/warframe/images/4/48/Sedna.png",
+        "eris" : "https://static.wikia.nocookie.net/warframe/images/b/b3/Eris.png",
+        "void" : "https://static.wikia.nocookie.net/warframe/images/4/46/Void.png",
+        "lua" : "https://static.wikia.nocookie.net/warframe/images/9/91/Lua.png",
+        "kuva fortress" : "https://static.wikia.nocookie.net/warframe/images/4/47/Kuva_Fortress.png"
+    },
+
     "sorties" : {
         "bosses" : {
             "default" : "https://static.wikia.nocookie.net/warframe/images/1/15/Sortie_b.png",
