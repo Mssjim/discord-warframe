@@ -7,7 +7,7 @@ const images = require("../../resources/images.json");
 module.exports = {
     name: 'sortie',
     aliases: ['sorties', 'raid', 'incursion', 'incursions', 'incursão', 'incursao'],
-    description: 'Get the list of sorties missions',
+    description: 'Shows sortie missions list',
     category: 'world-state',
 
     run: async(client, msg, args) => {
