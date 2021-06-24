@@ -9,7 +9,7 @@ module.exports = {
     name: 'news',
     aliases: ['noticias'],
     description: 'Shows Warframe News',
-    category: 'world-state',
+    category: 'warframe',
 
     run: async(client, msg, args) => {
         const data = await fetcher('https://api.warframestat.us/pc/news');

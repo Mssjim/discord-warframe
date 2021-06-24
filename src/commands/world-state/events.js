@@ -35,7 +35,6 @@ module.exports = { // TODO Show the rewards and missions of each event
                 .setTitle(d.description)
                 .addFields(fields)
                 .setColor(colors.primary)
-                //.setThumbnail()
                 .setTimestamp()
                 .setFooter(client.user.username, client.user.displayAvatarURL())
             );

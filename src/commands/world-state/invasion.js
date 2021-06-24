@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-const { fetcher, etaTime } = require("../../functions");
+const { fetcher } = require("../../functions");
 const colors = require("../../resources/colors.json");
 const emojis = require("../../resources/emojis.json");
 const images = require("../../resources/images.json");
