@@ -1,6 +1,7 @@
 {
     "prefix" : "!",
     "lang" : "en",
+    "owners" : ["446678418147508236", "293200894357405697"],
     "supportServer" : "https://discord.gg/h38gTNyPXA",
     "invite": "https://discord.com/oauth2/authorize?client_id=852204539004452884&scope=bot&permissions=67488833"
 }

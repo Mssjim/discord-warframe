@@ -3,7 +3,6 @@ const { getSimillarCommands } = require('../functions');
 const { MessageEmbed } = require('discord.js');
 const colors = require('../resources/colors.json');
 const emojis = require('../resources/emojis.json');
-const { supportServer } = require("../settings.json");
 
 async function run(cmd, client, msg, args) {
     if(cmd.length <1) return;
@@ -53,21 +52,9 @@ module.exports = client => {
         client.lang = settings.lang; // TODO Get guild lang
 
         if(msg.content.startsWith(`<@${client.user.id}>`) || msg.content.startsWith(`<@!${client.user.id}>`)) {
-
-            const description = `• My prefix for this server is \`${prefix}\``+
-            `\n• Type \`${prefix}help\` to see my commands`+
-            `\n• Invite me to your server with \`${prefix}invite\``+
-            `\n\n**Join on my Support Server**`+
-            `\n${supportServer}`;
-
-            const embed = new MessageEmbed()
-                .setDescription(description)
-                .setThumbnail(client.user.displayAvatarURL())
-                .setColor(colors.primary)
-
-            msg.channel.send(msg.author.toString(), embed);
+			run('info', client, msg, []);
         }
-    
+
         if(msg.author.bot || !msg.guild || !msg.content.startsWith(prefix)) return;
     
         const args = msg.content.slice(prefix.length).trim().split(' ');
