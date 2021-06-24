@@ -36,6 +36,7 @@
     },
 
     "syndicates" : {
+        "conclave" : "https://static.wikia.nocookie.net/warframe/images/2/2d/FactionSigilConclave.png",
         "nightwave" : "https://static.wikia.nocookie.net/warframe/images/e/e0/NightwaveSyndicate.png"
     },
 
