@@ -32,11 +32,10 @@ module.exports = {
             let fields = [];
 
             challenges.forEach(challenge => {
-                console.log(challenge, challenge.title)
                 challenge.eta = etaTime(new Date(challenge.expiry));
                 fields.push({
                     name: `${challenge.title} - ${challenge.eta}`,
-                    value: `${challenge.asString}`
+                    value: `${challenge.description}`
                 });
             });
 

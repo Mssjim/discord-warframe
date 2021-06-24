@@ -38,8 +38,10 @@ module.exports = {
 
         if(pages.length > 1) {
             pagination(msg, pages, ['◀️', '▶️']);
-        } else {
+        } else if(pages.length == 1) {
             msg.channel.send(msg.author.toString(), pages[0]);
+        } else {
+            msg.channel.send(`${emojis.error} **|** ${msg.author.toString()} There is no offer available.`)
         }
     }
 }

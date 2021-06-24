@@ -8,7 +8,7 @@ const pagination = require("discord.js-pagination");
 module.exports = {
     name: 'nightwave',
     aliases: ['nw'],
-    description: 'Display the currently nightwave challenges and timers',
+    description: 'Display the currently Nightwave challenges and timers',
     category: 'world-state',
 
     run: async(client, msg, args) => {

@@ -31,6 +31,11 @@
     "sorties" : {
         "bosses" : {
             "default" : "https://static.wikia.nocookie.net/warframe/images/1/15/Sortie_b.png",
+            "alad v" : "https://static.wikia.nocookie.net/warframe/images/1/12/AladV.png",
+            "ambulas" : "https://static.wikia.nocookie.net/warframe/images/e/e1/CodexAmbulas.png",
+            "corrupted vor" : "https://static.wikia.nocookie.net/warframe/images/e/ea/VorTwo.png",
+            "general sargas ruk" : "https://static.wikia.nocookie.net/warframe/images/3/3e/GeneralSargasRukCodex.png",
+            "lephantis" : "https://static.wikia.nocookie.net/warframe/images/3/3d/GolemFullAvatar.png",
             "raptor" : "https://static.wikia.nocookie.net/warframe/images/6/6c/RaptorTwoMortar.png"
         }
     },
