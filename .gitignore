@@ -106,7 +106,7 @@ dist
 # IDE stuff
 .vs/
 .vsc/
-./vscode
+.vscode/
 vs/
 vsc/
 vscode/
