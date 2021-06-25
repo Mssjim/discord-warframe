@@ -4,7 +4,7 @@
   "description": "A Discord-Bot with features and wiki of Warframe.",
   "main": "main.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
     "dotenv": "^10.0.0",
     "fs": "0.0.1-security",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.7.0"
   }
 }
