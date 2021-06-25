@@ -147,6 +147,7 @@ module.exports.getSimillarCommands = (commands, cmd) => {
 }
 
 module.exports.titleCase = string => {
+    string = (string + '').toLowerCase();
     const dashes = (string.match(/[-]/g) || []).length;
     const spaces = (string.match(/[ ]/g) || []).length;
 
