@@ -39,10 +39,11 @@ module.exports.fetcher = async(url) => {
         require('request')({
             uri: url
         }, (err, res) => {
-            if (!err && JSON.parse(res.body) && res.statusCode == 200) {
-                resolve(JSON.parse(res.body));
-            } else {
-                resolve();
+            if(err) return resolve();
+            try {
+                return resolve(JSON.parse(res.body));
+            } catch(e) {
+                return resolve();
             }
         });
     });
