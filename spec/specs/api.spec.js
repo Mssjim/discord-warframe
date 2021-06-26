@@ -1,4 +1,8 @@
 describe("API", () => {
+    beforeAll(() => {
+        console.log('\nAPI Specs');
+    });
+
     const { fetcher } = require('../../src/functions');
 
     it("should be able to return a response", async() => {

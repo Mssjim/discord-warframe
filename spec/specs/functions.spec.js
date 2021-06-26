@@ -1,5 +1,9 @@
 describe('Function', () => {
 
+    beforeAll(() => {
+        console.log('\nFunctions Specs');
+    });
+
     describe("ETA", () => {
         const { etaTime } = require("../../src/functions");
     
