@@ -1,9 +1,9 @@
 module.exports.etaTime = date => {
-    let millis = date.getTime() - Date.now();
+    let millis;
+    if(date instanceof Date) millis = date.getTime() - Date.now();
+    else if(!isNaN(date))millis = date - Date.now();
+    else throw new TypeError("Invalid date param");
 
-    if (typeof millis !== 'number') {
-        throw new TypeError('millis should be a number');
-    }
     const eta = [];
     let seconds = Math.abs(millis / 1000);
 
@@ -28,7 +28,7 @@ module.exports.etaTime = date => {
         seconds = Math.floor(seconds) % duration.minute;
     }
     
-    if (seconds >= 0) {
+    if (seconds > 0) {
         eta.push(`${Math.floor(seconds)}s`);
     }
     return eta.join(' ');
