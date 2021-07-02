@@ -1,5 +1,4 @@
 describe('Function', () => {
-
     beforeAll(() => {
         console.log('\nFunctions Specs');
     });

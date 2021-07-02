@@ -1,4 +1,4 @@
-describe('Bot', () => {
+describe('Bot', () => { // TODO Checks commands and events stuff
     beforeAll(async() => {
         console.log('\nBot Specs');
         await client.login(process.env.TOKEN);

@@ -1,6 +1,6 @@
 {
-    "prefix" : "!",
     "json" : "true",
+    "prefix" : ";",
     "lang" : "en",
     "owners" : ["446678418147508236", "293200894357405697"],
     "supportServer" : "https://discord.gg/h38gTNyPXA",
